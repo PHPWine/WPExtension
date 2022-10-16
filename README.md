@@ -1,4 +1,4 @@
-# Extension
+# WPExtension Boilerplate (Framework)
 Support PHP v8++ WPPlugin Boilerplate (framework)
 
 Backend Components: 
