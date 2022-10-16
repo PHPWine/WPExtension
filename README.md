@@ -4,7 +4,7 @@ Support only PHP v8++ WP Plugin Boilerplate with detects auto update
 Backend Components: 
 - PHPWine v2.0
 - PHPVanilla v1.5
-- PHPwine Enhancer 
+- PHPWine Enhancer 
 - D|T|M : PHP Dynamic Column          
 - D|T|M : PHP Dyanmic Tab             
 - D|T|M : PHP Dyanmic Accordion       
