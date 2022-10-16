@@ -4,7 +4,7 @@ Support PHP v8++ WPPlugin Boilerplate (framework)
 Backend Dependencies: 
 - PHPWine v2.0
 - PHPVanilla v1.5
-- PHPVanilla Restful API [ Custom EndPoint ]
+- PHPVanilla Restful API [ Custom EndPoint w/Altorouter ]
 - PHPWine Enhancer 
 - D|T|M : PHP Dynamic Column          
 - D|T|M : PHP Dyanmic Tab             
@@ -16,8 +16,7 @@ Backend Dependencies:
 - D|T|M : PHP Dynamic Gallery        
 - D|T|M : PHP Static SearchFilter 
 - D|T|M : PHP Pagination 
-- CMB2 
-- Altorouter 
+- CMB2
 - Automatic Updates   
 
 FrontEnd Dependencies: 
