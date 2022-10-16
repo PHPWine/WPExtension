@@ -11,6 +11,7 @@ $new->WPExtenstionProperties(
 	'wp-extenstion',
 	'wp_get_extenstion_rendered',
 	'dashicons-welcome-write-blog'
+	
 );
 
 function wp_get_extenstion_rendered() {
