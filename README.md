@@ -4,6 +4,7 @@ Support PHP v8++ WPPlugin Boilerplate (framework)
 Backend Dependencies: 
 - PHPWine v2.0
 - PHPVanilla v1.5
+- PHPVanilla Restful API [ Custom EndPoint ]
 - PHPWine Enhancer 
 - D|T|M : PHP Dynamic Column          
 - D|T|M : PHP Dyanmic Tab             
