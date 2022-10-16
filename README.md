@@ -24,8 +24,8 @@ FrontEnd Components:
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
 Resources: <br />
-WP Generator Source: <a href="https://wppb.me/"> CLick link here > </a><br />
-Google Fonts: <a href="https://fonts.google.com/"> CLick link here > </a>
+WP Generator Source: <a href="https://wppb.me/"> Click link here > </a><br />
+Google Fonts: <a href="https://fonts.google.com/"> Click link here > </a>
 
 
 <hr /> 
