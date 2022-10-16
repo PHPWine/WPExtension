@@ -20,6 +20,7 @@ Backend Components:
 
 FrontEnd Components: 
 - Bootstrap 4
+- Fontawesome
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
 Resources: <br />
