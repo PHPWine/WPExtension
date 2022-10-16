@@ -76,12 +76,7 @@ function run_extension() {
 
 	$plugin = new Extension();
 	$plugin->run();
-	/**
-	 * The code that runs all time as plugin was activated!
-	 * Load app from apps @since 16-10-2022 | wine v2.0 */
 
-
-	
 }
 
 run_extension();
