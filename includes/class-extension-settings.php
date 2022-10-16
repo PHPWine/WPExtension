@@ -42,4 +42,5 @@ class Settings {
     static public function wine_load_includes() {
         return self::$wine_load_includes;
     }
+    
 }
