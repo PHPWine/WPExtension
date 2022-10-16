@@ -1,7 +1,7 @@
 # WPExtension Boilerplate (Framework)
 Support PHP v8++ WPPlugin Boilerplate (framework)
 
-Backend Components: 
+Backend Dependencies: 
 - PHPWine v2.0
 - PHPVanilla v1.5
 - PHPWine Enhancer 
@@ -19,7 +19,7 @@ Backend Components:
 - Altorouter 
 - Automatic Updates   
 
-FrontEnd Components: 
+FrontEnd Dependencies: 
 - Bootstrap 4
 - Fontawesome
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
