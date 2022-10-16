@@ -1,6 +1,6 @@
 <?php 
 
-require_once plugin_dir_path( dirname( __FILE__ ) ) .'/apps/WPExtenstionParentMenu.php';
+require_once ('WPExtenstionParentMenu.php');
 
 $new =  new WPExtenstionParentMenu();
 $new->WPExtenstionProperties(
