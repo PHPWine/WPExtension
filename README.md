@@ -15,7 +15,8 @@ Backend Components:
 - D|T|M : PHP Dynamic Gallery        
 - D|T|M : PHP Static SearchFilter 
 - D|T|M : PHP Pagination 
-- Automatic Updates For Private And Commercial Plugins 
+- CMB2 Installed 
+- Automatic Updates Installed  
 
 FrontEnd Components: 
 - Bootstrap 4
