@@ -1,5 +1,5 @@
 # Extension
-Support only PHP v8++ WP Plugin Boilerplate with detects auto update
+Support PHP v8++ WPPlugin Boilerplate (framework)
 
 Backend Components: 
 - PHPWine v2.0
