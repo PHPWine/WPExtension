@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The plugin bootstrap file
  *
@@ -10,11 +9,11 @@
  *
  * @link              https://https://nielsoffice197227997.wordpress.com/nielsoffice-contact/
  * @since             1.0.0
- * @package           Extension
+ * @package           WPExtension
  *
  * @wordpress-plugin
- * Plugin Name:       Extension
- * Plugin URI:        https://https://github.com/nielsofficeofficial/Extension
+ * Plugin Name:       WPExtension
+ * Plugin URI:        https://https://github.com/nielsofficeofficial/WPExtension
  * Description:       WP Plugin Boilerplate with detects auto update
  * Version:           1.0.0
  * Author:            nielfernandez
@@ -43,7 +42,7 @@ define( 'EXTENSION_VERSION', '1.0.0' );
  */
 function activate_extension() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-extension-activator.php';
-	Extension_Activator::activate();
+	Extension_Activator::activate();	
 }
 
 /**
@@ -77,6 +76,13 @@ function run_extension() {
 
 	$plugin = new Extension();
 	$plugin->run();
+	/**
+	 * The code that runs all time as plugin was activated!
+	 * Load app from apps @since 16-10-2022 | wine v2.0 */
 
+
+	
 }
+
 run_extension();
+

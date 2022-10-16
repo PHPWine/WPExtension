@@ -67,6 +67,7 @@ class Extension {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
+
 		if ( defined( 'EXTENSION_VERSION' ) ) {
 			$this->version = EXTENSION_VERSION;
 		} else {
@@ -78,6 +79,13 @@ class Extension {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
+
+		$this->___wineLoadFunctions( 
+			   ___directories : Settings::wine_load_admin()); 
+		$this->___wineLoadFunctions( 
+			   ___directories : Settings::wine_load_public());
+		$this->___wineLoadFunctions( 
+			   ___directories : Settings::wine_load_includes());
 
 	}
 
@@ -98,6 +106,12 @@ class Extension {
 	 * @access   private
 	 */
 	private function load_dependencies() {
+
+		/**
+		 * The class responsible for defining all actionsproperties for configuration settings default
+		 * of the entire wp extension.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-extension-settings.php';
 
 		/**
 		 * The class responsible for orchestrating the actions and filters of the
@@ -123,6 +137,30 @@ class Extension {
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-extension-public.php';
 
 		$this->loader = new Extension_Loader();
+
+	}
+
+	private function wp_get_extension_rendered() {
+
+		echo "Test";
+  
+	}
+
+	static public function ___wineLoadFunctions( string|Settings $___directories = null ) : void
+	{  if(!is_null($___directories)) 
+		{
+			
+			// Define current abosulte directory 
+			$___wineGetAllRun = new DirectoryIterator( dirname( __FILE__ ) . $___directories );
+			// loop data file 
+			foreach ($___wineGetAllRun as $appRequest) 
+
+			{ ( (!$appRequest->isDot()) ? require_once( plugin_dir_path(__FILE__) . $___directories . $appRequest->getFilename() ) 
+				
+				: false ); // return false if there's nothing!
+
+			}
+	   }  
 
 	}
 
