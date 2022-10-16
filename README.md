@@ -15,9 +15,9 @@ Backend Components:
 - D|T|M : PHP Dynamic Gallery        
 - D|T|M : PHP Static SearchFilter 
 - D|T|M : PHP Pagination 
-- CMB2 ready Installed 
-- Altorouter ready Installed 
-- Automatic Updates ready Installed  
+- CMB2 
+- Altorouter 
+- Automatic Updates   
 
 FrontEnd Components: 
 - Bootstrap 4
