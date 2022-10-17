@@ -1,7 +1,7 @@
 <?php  namespace WPExtension\admin\app; ?>
-<?php 
+<?php
 
-   use WPExtension\admin\app\WPExtenstionParentMenu;
+use WPExtension\admin\app\WPExtenstionParentMenu;
 
    $__adminMenu = new Class {
   
@@ -11,7 +11,7 @@
 		new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH1;  // follow by merge version HTML_H1 and so on!...
 		new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlSpan;
 
-		$new =  new WPExtenstionParentMenu();
+		$new = new WPExtenstionParentMenu();
 		$new->WPExtenstionProperties(
 	
 		'WP Extension',
@@ -29,12 +29,11 @@
 		
 		echo H1('Welcome to WP Extension !');
 		echo span("Description");
+		echo setDate( date("l") );
 	
 	}
 
 
-   
-	
  };
 
 
