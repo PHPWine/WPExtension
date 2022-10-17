@@ -1,0 +1,5 @@
+{
+    "require": {
+        "phpwinevanillaflavour/phpwine": "^1.4"
+    }
+}
