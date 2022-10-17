@@ -1,7 +1,7 @@
-<?php  namespace WPExtension\admin\app; ?>
+<?php  namespace WPExtension\Admin\App; ?>
 <?php
 
-use WPExtension\admin\app\WPExtenstionParentMenu;
+use WPExtension\Admin\App\WPExtenstionParentMenu;
 
    $__adminMenu = new Class {
   
