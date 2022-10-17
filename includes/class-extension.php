@@ -78,6 +78,7 @@ class Extension {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
+		$this->phpwine('autoload');
 		$this->___wineLoadFunctions( 
 			   ___directories :  Settings::wine_load_admin()); 			   
 		$this->___wineLoadFunctions( 
@@ -125,12 +126,6 @@ class Extension {
 	private function load_dependencies() {
 
 		/**
-		 * The class responsible for defining all app classes
-		 * of the entire wp extension.
-		 */
-		require_once plugin_dir_path( __FILE__ ) . '/../apps/vendor/autoload.php';
-
-		/**
 		 * The class responsible for defining extension loader file
 		 * of the entire wp extension.
 		 */
@@ -169,6 +164,11 @@ class Extension {
 
 	}
 
+	/**
+	 * Define the locale for this LoadFile data 
+	 * @since    1.0.0
+	 * @since 18-10-2022 wine v2.0 */
+	private function phpwine(string $autoload) : void { require plugin_dir_path( __FILE__ ) .'/../apps/vendor/' . $autoload.'.'.'php'; }
 
 	/**
 	 * Define the locale for this LoadFile data 

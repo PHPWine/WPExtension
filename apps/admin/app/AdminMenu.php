@@ -7,6 +7,10 @@
   
 	public function __construct() {
 
+		new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerElem; // this is mandatory when dev use merge !
+		new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH1;  // follow by merge version HTML_H1 and so on!...
+		new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlSpan;
+
 		$new =  new WPExtenstionParentMenu();
 		$new->WPExtenstionProperties(
 	
@@ -23,9 +27,12 @@
 
 	public function wp_get_extenstion_rendered() {
 		
-		echo "Hello WP Extenstion!";
+		echo H1('Welcome to WP Extension !');
+		echo span("Description");
 	
 	}
+
+
    
 	
  };
