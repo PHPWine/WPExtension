@@ -1,11 +1,10 @@
-# WPExtension Boilerplate (Framework)
-Support PHP v8++ WPPlugin Boilerplate (framework)
+# Extension
+Support only PHP v8++ WP Plugin Boilerplate with detects auto update
 
-Backend Dependencies: 
+Backend Components: 
 - PHPWine v2.0
 - PHPVanilla v1.5
-- PHPVanilla Restful API [ Custom EndPoint w/Altorouter ]
-- PHPWine Enhancer 
+- PHPwine Enhancer 
 - D|T|M : PHP Dynamic Column          
 - D|T|M : PHP Dyanmic Tab             
 - D|T|M : PHP Dyanmic Accordion       
@@ -16,17 +15,15 @@ Backend Dependencies:
 - D|T|M : PHP Dynamic Gallery        
 - D|T|M : PHP Static SearchFilter 
 - D|T|M : PHP Pagination 
-- CMB2
-- Automatic Updates   
+- Automatic Updates For Private And Commercial Plugins 
 
-FrontEnd Dependencies: 
+FrontEnd Components: 
 - Bootstrap 4
-- Fontawesome
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
 Resources: <br />
-WP Generator Source: <a href="https://wppb.me/"> Link > </a><br />
-Google Fonts: <a href="https://fonts.google.com/"> Link > </a>
+WP Generator Source: <a href="https://wppb.me/"> CLick link here > </a><br />
+Google Fonts: <a href="https://fonts.google.com/"> CLick link here > </a>
 
 
 <hr /> 

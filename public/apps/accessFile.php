@@ -23,3 +23,4 @@
  * @access   private
  * @var      string    $plugin_name The ID of this plugin. */
 # require_once plugin_dir_path( dirname( __FILE__ ) ) .'/../includes/apps/file.php';
+?>

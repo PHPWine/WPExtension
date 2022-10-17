@@ -79,7 +79,6 @@ class Extension {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-
 		$this->___wineLoadFunctions( 
 			   ___directories : Settings::wine_load_admin()); 
 		$this->___wineLoadFunctions( 
@@ -177,23 +176,16 @@ class Extension {
 	 * Define the locale for this LoadFile data 
 	 * @since    1.0.0
 	 * @since 16-10-2022 wine v2.0 */
-	
-        private function ___wineLoadFunctions( string|Settings $___directories = null ) : void
-	  {  if(!is_null($___directories)) 
-	     {
-			
-		// Define current abosulte directory 
-		$___wineGetAllRun = new DirectoryIterator( dirname( __FILE__ ) . $___directories );
-		// loop data file 
-		foreach ($___wineGetAllRun as $appRequest) 
-
-		{ ( (!$appRequest->isDot()) ? require_once( plugin_dir_path(__FILE__) . $___directories . $appRequest->getFilename() ) 
-				
-		   : false ); // return false if there's nothing!
-
-		}
+    private function ___wineLoadFunctions( string|Settings $___directories = null ) : void
+	{  if(!is_null($___directories)) 
+		{   // Define current abosulte directory 
+			$___wineGetAllRun = new DirectoryIterator( dirname( __FILE__ ) . $___directories );
+			// loop data file 
+			foreach ($___wineGetAllRun as $appRequest) 
+			{ if (!$appRequest->isDot() ) { require_once( plugin_dir_path(__FILE__) . $___directories . $appRequest->getFilename() );
+			    } else { return; } 
+			}
 	   }  
-
 	}
 
 	/**
