@@ -80,4 +80,3 @@ function run_extension() {
 }
 
 run_extension();
-

@@ -9,8 +9,8 @@
  * @link       https://https://nielsoffice197227997.wordpress.com/nielsoffice-contact/
  * @since      1.0.0
  *
- * @package    Extension
- * @subpackage Extension/includes
+ * @package    WPExtension
+ * @subpackage WPExtension/includes
  */
 
 /**
@@ -68,11 +68,10 @@ class Extension {
 	 */
 	public function __construct() {
 
-		if ( defined( 'EXTENSION_VERSION' ) ) {
-			$this->version = EXTENSION_VERSION;
-		} else {
-			$this->version = '1.0.0';
+		if ( defined( 'EXTENSION_VERSION' ) ) { $this->version = EXTENSION_VERSION;
+		} else { $this->version = '1.0.0';
 		}
+		
 		$this->plugin_name = 'extension';
 
 		$this->load_dependencies();
@@ -80,11 +79,30 @@ class Extension {
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
 		$this->___wineLoadFunctions( 
-			   ___directories : Settings::wine_load_admin()); 
+			   ___directories :  Settings::wine_load_admin()); 			   
 		$this->___wineLoadFunctions( 
 			   ___directories : Settings::wine_load_public());
-		$this->___wineLoadFunctions( 
-			   ___directories : Settings::wine_load_includes());
+
+		define('temp_file', ABSPATH.'/_temp_out.txt' );
+
+		add_action("activated_plugin",function (){
+			$cont = ob_get_contents();
+			if(!empty($cont)) file_put_contents(temp_file, $cont );
+		});
+
+		add_action( "pre_current_active_plugins", function ($action){
+	
+			$extension = $_REQUEST['plugin'];
+			$extension = explode('/',$extension);
+	
+			if(is_admin() && file_exists(temp_file))
+			{ 
+				$cont= file_get_contents(temp_file);
+				if(!empty($cont) && ($extension[0] === 'WPExtension' ) )
+				{?><style>#message, .error { display: none; }</style><?php }
+			}
+
+		});
 
 	}
 
@@ -107,6 +125,18 @@ class Extension {
 	private function load_dependencies() {
 
 		/**
+		 * The class responsible for defining all app classes
+		 * of the entire wp extension.
+		 */
+		require_once plugin_dir_path( __FILE__ ) . '/../apps/vendor/autoload.php';
+
+		/**
+		 * The class responsible for defining extension loader file
+		 * of the entire wp extension.
+		 */
+		require_once plugin_dir_path( __FILE__ ) . '/../vendor/autoload.php';
+
+		/**
 		 * The class responsible for defining all actionsproperties for configuration settings default
 		 * of the entire wp extension.
 		 */
@@ -127,16 +157,36 @@ class Extension {
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-extension-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'apps/admin/ExtensionAdmin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-extension-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'apps/public/ExtensionPublic.php';
 
 		$this->loader = new Extension_Loader();
 
+	}
+
+
+	/**
+	 * Define the locale for this LoadFile data 
+	 * @since    1.0.0
+	 * @since 16-10-2022 wine v2.0 */
+    private function ___wineLoadFunctions( string|Settings $___directories = null ) : void {  
+	  if(!is_null($___directories)) 
+		{   
+			$___wineGetAllRun = new DirectoryIterator( dirname( __FILE__ ) . $___directories );
+
+			foreach ($___wineGetAllRun as $appRequest) 
+			{
+				
+			  if (!$appRequest->isDot() ) { require_once( plugin_dir_path(__FILE__) . $___directories . $appRequest->getFilename() ); } 
+	
+		   }
+	   }  
+	  
 	}
 
 	/**
@@ -165,27 +215,11 @@ class Extension {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Extension_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new ExtensionAdmin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 
-	}
-
-	/**
-	 * Define the locale for this LoadFile data 
-	 * @since    1.0.0
-	 * @since 16-10-2022 wine v2.0 */
-    private function ___wineLoadFunctions( string|Settings $___directories = null ) : void
-	{  if(!is_null($___directories)) 
-		{   // Define current abosulte directory 
-			$___wineGetAllRun = new DirectoryIterator( dirname( __FILE__ ) . $___directories );
-			// loop data file 
-			foreach ($___wineGetAllRun as $appRequest) 
-			{ if (!$appRequest->isDot() ) { require_once( plugin_dir_path(__FILE__) . $___directories . $appRequest->getFilename() );
-			    } else { return; } 
-			}
-	   }  
 	}
 
 	/**
@@ -197,7 +231,7 @@ class Extension {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Extension_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new ExtensionPublic( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
