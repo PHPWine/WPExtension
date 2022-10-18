@@ -1,7 +1,7 @@
 # WPExtension plugin framework
 WPExtension System cloud application development wp plugin framework [ Support only PHP v8++  ]
 
-Backend Dependencies :  PHPVAnilla RESTful-API | Guzzle  |  CMB2 | TCPDF | GULP | PHPMailer | PHPWine v2.0 | PHPVanilla v1.5 | PHPwine Enhancer
+Backend Dependencies :  PHPVanilla RESTful-API | Guzzle  |  CMB2 | TCPDF | GULP | PHPMailer | PHPWine v2.0 | PHPVanilla v1.5 | PHPwine Enhancer
 - D|T|M : PHP Dynamic Column  
 - D|T|M : PHP Dyanmic Tab 
 - D|T|M : PHP Dyanmic Accordion  
