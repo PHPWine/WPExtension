@@ -1,0 +1,29 @@
+{
+    "name": "wpextension/extension",
+    "type": "framework",
+    "description": "Wp Extenstion A WordPress Plugin Framework helps you to Develop Cloud System Application Micro to Robust Internet application",
+    "keywords": ["WP Extenstion","WP Plugin Framework","Plugin Boilerplate","WP Plugin"],
+    "homepage": "https://github.com/PHPWine/WPExtension",
+    "license": "GNUv3",
+    "authors": [
+        {
+            "name": "Project of nielsoffice: by Leinner Zednanref",
+            "email": "nielsoffice.wordpress.php@gmail.com",
+            "homepage": "https://nielsoffice197227997.wordpress.com/",
+            "role": "Author and Maintainer/Programmer"
+        } 
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "WPExtension\\" : "apps/"
+        },
+        "classmap": [
+            "apps/vendor/autoload.php"
+        ]
+    },
+    "require": {
+        
+        "php": ">=8.0"
+        
+    }
+}

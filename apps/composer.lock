@@ -1,0 +1,76 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "7ec2f81f5857e5c14a49821f6a06ea9b",
+    "packages": [
+        {
+            "name": "phpwinevanillaflavour/phpwine",
+            "version": "v1.4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPWine/PHPWine.git",
+                "reference": "44b115bc84f362ea1806870d46bd953c995358b8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPWine/PHPWine/zipball/44b115bc84f362ea1806870d46bd953c995358b8",
+                "reference": "44b115bc84f362ea1806870d46bd953c995358b8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PHPWineVanillaFlavour\\": "src/"
+                },
+                "classmap": [
+                    "src/",
+                    "src/Wine",
+                    "src/prop.php",
+                    "src/Wine/Optimizer/prop.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "nielsoffice by Leinner Zednanref",
+                    "email": "nielsoffice.wordpress.php@gmail.com",
+                    "homepage": "https://nielsoffice197227997.wordpress.com/",
+                    "role": "Author and Maintainer"
+                }
+            ],
+            "description": "PHP code encrypted, PHP Library, Code designer and Optimizer, Html-minifier Advance Form builder, Form Validation and more...",
+            "homepage": "https://github.com/nielsofficeofficial/PHPWine",
+            "keywords": [
+                "Advance Form Builder",
+                "Handling Form Validation",
+                "PHPOptimizer",
+                "PHPWine",
+                "basic authentication",
+                "phphtml-optimizer"
+            ],
+            "support": {
+                "issues": "https://github.com/PHPWine/PHPWine/issues",
+                "source": "https://github.com/PHPWine/PHPWine/tree/v1.4.0.0"
+            },
+            "time": "2022-06-09T08:22:32+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}
