@@ -1,29 +1,26 @@
 # WPExtension plugin framework
-Support only PHP v8++ WPExtension System cloud application development wp plugin framework
+WPExtension System cloud application development wp plugin framework [ Support only PHP v8++  ]
 
-Backend Components: 
-- PHPWine v2.0
-- PHPVanilla v1.5
-- PHPwine Enhancer 
-- D|T|M : PHP Dynamic Column          
-- D|T|M : PHP Dyanmic Tab             
-- D|T|M : PHP Dyanmic Accordion       
-- D|T|M : PHP Dynamic Table           
-- D|T|M : PHP Dynamic Banner Slider   
-- D|T|M : PHP Dynamic Product Slider  
-- D|T|M : PHP Dynamic Logo Slider     
-- D|T|M : PHP Dynamic Gallery        
+Backend Dependencies :  PHPVAnilla RESTful-API | Guzzle  |  CMB2 | TCPDF | GULP | PHPMailer | PHPWine v2.0 | PHPVanilla v1.5 | PHPwine Enhancer
+- D|T|M : PHP Dynamic Column  
+- D|T|M : PHP Dyanmic Tab 
+- D|T|M : PHP Dyanmic Accordion  
+- D|T|M : PHP Dynamic Table  
+- D|T|M : PHP Dynamic Banner Slider 
+- D|T|M : PHP Dynamic Product Slider 
+- D|T|M : PHP Dynamic Logo Slider 
+- D|T|M : PHP Dynamic Gallery 
 - D|T|M : PHP Static SearchFilter 
 - D|T|M : PHP Pagination 
-- Automatic Updates For Private And Commercial Plugins 
+- WPCore Automatic Updates and more!
 
 FrontEnd Components: 
 - Bootstrap 4
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
 Resources: <br />
-WP Generator Source: <a href="https://wppb.me/"> CLick link here > </a><br />
-Google Fonts: <a href="https://fonts.google.com/"> CLick link here > </a>
+WP Generator Source: <a href="https://wppb.me/">Link</a><br />
+Google Fonts: <a href="https://fonts.google.com/">Link</a>
 
 
 <hr /> 
