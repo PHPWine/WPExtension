@@ -94,8 +94,9 @@ class Extension {
 			$extension = $_REQUEST['plugin']?? '';
 			$extension = explode('/',$extension);
 			if(is_admin() && file_exists(temp_file)) { 
-				$cont= file_get_contents(temp_file);
-				if(!empty($cont) && ($extension[0] === 'WPExtension' ) )
+			  $cont= file_get_contents(temp_file);
+			  if(!empty($cont) && (($extension[0] === 'WPExtension' ) || 
+			    ($extension[0] === 'WPExtension-main' )) )
 				{ print('<style>#message, .error { display: none; }</style>'); }
 			}
 
@@ -154,13 +155,15 @@ class Extension {
 	 * Define the locale for this LoadFile data 
 	 * @since    1.0.0
 	 * @since 16-10-2022 wine v2.0 */
-    private function ___wineLoadFunctions( string|Settings $___directories = null ) : void {  
+	private function ___wineLoadFunctions( string|Settings $___directories = null ) : void {  
 	  if(!is_null($___directories)) 
 		{   
-			$___wineGetAllRun = new DirectoryIterator( dirname( __FILE__ ) . $___directories );
+		  $___wineGetAllRun = new DirectoryIterator( dirname( __FILE__ ) . $___directories );
 
-			foreach ($___wineGetAllRun as $appRequest) 
-			{ if (!$appRequest->isDot() ) { require_once( plugin_dir_path(__FILE__) . $___directories . $appRequest->getFilename() ); } }
+		  foreach ($___wineGetAllRun as $appRequest) 
+		  {  if (!$appRequest->isDot() ) 
+			 { require_once( plugin_dir_path(__FILE__) . $___directories . $appRequest->getFilename() ); } 
+		  }
 	   }  
 	}
 
