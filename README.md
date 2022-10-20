@@ -19,6 +19,13 @@ FrontEnd Components:
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
 ```PHP
+ // Debugging
+ define('PHPWINE_DEBUG_ERRORS', true );  // @since v1.4
+ define('PHPCRUD_DEBUG_ERRORS', true ); 
+ // rename WPExtension file as 
+ WPExtension-debugging or just [ -debug ]
+```
+```PHP
   // Installing WinElement Dependency
   use PHPWineVanillaFlavour\Apps\PHPWineElement\Wine\WineElement;
 
