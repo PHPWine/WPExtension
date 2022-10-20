@@ -25,7 +25,7 @@ FrontEnd Components:
      | - Admin
      | - Public
      | - Api
-     | - Shorcodes
+     | - Shorcodes [ class not allowed inside ]
      | - Vendor
          | - Guzzle
          | - AltoRouter
