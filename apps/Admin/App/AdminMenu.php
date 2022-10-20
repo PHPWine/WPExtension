@@ -49,15 +49,6 @@ use WPExtension\Admin\App\ParentMenu;
 		]);
 		$elem->renderElements();
 
-		$elem =  new WineAccordion();
-		$elem->Element([
-		  'attr'  => ['data-r'=>'drive', 'data-t'=>'wheel', 'data-n'=>'y'], 
-		  'elem'  => 'h1',
-		  'id'    => 'id', 
-		  'class' => 'class', 
-		  'value' => 'First Above!']);
-	
-		$elem->renderElements();
 	 }
 
  };
