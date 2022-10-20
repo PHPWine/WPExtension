@@ -25,9 +25,7 @@
  */
 
 // If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
-}
+if ( ! defined( 'WPINC' ) ) { die; }
 
 /**
  * Currently plugin version.
@@ -40,22 +38,24 @@ define( 'EXTENSION_VERSION', '1.0.0' );
  * The code that runs during plugin activation.
  * This action is documented in includes/class-extension-activator.php
  */
-function activate_extension() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-extension-activator.php';
-	Extension_Activator::activate();	
+function activate_extension() 
+{
+  require_once plugin_dir_path( __FILE__ ) . 'includes/class-extension-activator.php';
+  Extension_Activator::activate();	
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-extension-deactivator.php
  */
-function deactivate_extension() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-extension-deactivator.php';
-	Extension_Deactivator::deactivate();
+function deactivate_extension() 
+{
+  require_once plugin_dir_path( __FILE__ ) . 'includes/class-extension-deactivator.php';
+  Extension_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_extension' );
-register_deactivation_hook( __FILE__, 'deactivate_extension' );
+  register_activation_hook( __FILE__, 'activate_extension' );
+  register_deactivation_hook( __FILE__, 'deactivate_extension' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -72,10 +72,11 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-extension.php';
  *
  * @since    1.0.0
  */
-function run_extension() {
+function run_extension() 
+{
 
-	$plugin = new Extension();
-	$plugin->run();
+  $plugin = new Extension();
+  $plugin->run();
 
 }
 

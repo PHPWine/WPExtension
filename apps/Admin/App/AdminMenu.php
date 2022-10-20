@@ -1,17 +1,20 @@
 <?php  namespace WPExtension\Admin\App; ?>
 <?php
 
-use WPExtension\Admin\App\WPExtenstionParentMenu;
+use PHPWineVanillaFlavour\Apps\PHPWineElement\Wine\WineElement;
+use WPExtension\Admin\App\ParentMenu;
+
 
    $__adminMenu = new Class {
   
 	public function __construct() {
 
-		new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerElem; // this is mandatory when dev use merge !
-		new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH1;  // follow by merge version HTML_H1 and so on!...
+		new \PHPWineVanillaFlavour\Wine\Optimizer\EnhancerElem;
+		new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlH1;  
 		new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlSpan;
+		new \PHPWineVanillaFlavour\Wine\Optimizer\HtmlDiv;
 
-		$new = new WPExtenstionParentMenu();
+		$new = new ParentMenu();
 		$new->WPExtenstionProperties(
 	
 		'WP Extension',
@@ -30,10 +33,26 @@ use WPExtension\Admin\App\WPExtenstionParentMenu;
 		echo H1('Welcome to WP Extension !');
 		echo span("Description");
 		echo setDate( date("l") );
-	
+
+		$elem =  new WineElement();
+		$elem->Element([
+		  'attr'  => ['data-r'=>'drive', 'data-t'=>'wheel', 'data-n'=>'y'], 
+		  'elem'  => 'h1',
+		  'id'    => 'id', 
+		  'class' => 'class', 
+		  'value' => 'First Above!']);
+		$elem->Element([
+		  'id'    => 'nid', 
+		  'class' => 'nclass', 
+		  'value' => function() { return('This is New Above!');}
+		]);
+		$elem->renderElements();
+
 	}
 
-
  };
+
+ ?>
+
 
 
