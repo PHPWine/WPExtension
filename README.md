@@ -26,15 +26,15 @@ FrontEnd Components:
      | - Api
      | - Shorcodes [ class not allowed inside ]
      | - Vendor
+         | - PHPWine v2.0
+             | - PHPVanilla v1.5
+             | - PHP WineElement
+             | - PHPWine Enhancers
          | - Guzzle
          | - AltoRouter
          | - CMB2
          | - TCPDF
          | - PHPMailer
-         | - PHPWine v2.0
-             | - PHPVanilla v1.5
-             | - PHP WineElement
-             | - PHPWine Enhancers
       -
   | - Includes
   | - Loader
