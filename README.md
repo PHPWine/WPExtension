@@ -19,20 +19,20 @@ FrontEnd Components:
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
 ```PHP
-  // Installing WInElement Dependency
+  // Installing WinElement Dependency
   use PHPWineVanillaFlavour\Apps\PHPWineElement\Wine\WineElement;
 
   $elem =  new WineElement();
   $elem->Element([
-    'attr'  => ['data-r'=>'drive', 'data-t'=>'wheel', 'data-n'=>'y'], 
-    'elem'  => 'h1',
-    'id'    => 'id', 
-    'class' => 'class', 
-    'value' => 'First Above!']);
+     'attr'  => ['data-r'=>'drive', 'data-t'=>'wheel', 'data-n'=>'y']
+    ,'elem'  => 'h1'
+    ,'id'    => 'id' 
+    ,'class' => 'class' 
+    ,'value' => 'First Above!']);
   $elem->Element([
-    'id'    => 'nid', 
-    'class' => 'nclass', 
-    'value' => function() { return('This is New Above!'); }
+    'id'     => 'new_id' 
+    ,'class' => 'new_class' 
+    ,'value' => function() { return('This is New Above!'); }
   ]);
   $elem->renderElements();
 ```
