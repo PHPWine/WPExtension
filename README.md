@@ -12,7 +12,6 @@ Backend Dependencies :  PHPVanilla RESTful-API | Guzzle  |  AltoRouter | CMB2 | 
 - D|T|M : PHP Dynamic Gallery 
 - D|T|M : PHP Static SearchFilter 
 - D|T|M : PHP Pagination 
-- WPCore Automatic Updates and more!
 
 FrontEnd Components: 
 - Bootstrap 4
