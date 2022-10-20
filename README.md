@@ -18,7 +18,7 @@ FrontEnd Components:
 - Bootstrap 4
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
-```PHP
+```HTML
  // Structure and Dependencies 
  | - root folder [ WPExtension ]
    | - Apps
