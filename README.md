@@ -2,7 +2,7 @@
 WPExtension System cloud application development wp plugin framework [ Support only PHP v8++  ]
 
 Backend Dependencies :  PHPVanilla RESTful-API | Guzzle  |  AltoRouter | CMB2 | TCPDF | GULP | PHPMailer | PHPWine v2.0 | PHPVanilla v1.5 | PHPWine Enhancer |
-- D|T|M : PHP Dynamic Column  
+- D|T|M : PHP WineElement  
 - D|T|M : PHP Dyanmic Tab 
 - D|T|M : PHP Dyanmic Accordion  
 - D|T|M : PHP Dynamic Table  
@@ -18,6 +18,24 @@ FrontEnd Components:
 - Bootstrap 4
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
+```PHP
+  // Installing WInElement Dependency
+  use PHPWineVanillaFlavour\Apps\PHPWineElement\Wine\WineElement;
+
+  $elem =  new WineElement();
+  $elem->Element([
+    'attr'  => ['data-r'=>'drive', 'data-t'=>'wheel', 'data-n'=>'y'], 
+    'elem'  => 'h1',
+    'id'    => 'id', 
+    'class' => 'class', 
+    'value' => 'First Above!']);
+  $elem->Element([
+    'id'    => 'nid', 
+    'class' => 'nclass', 
+    'value' => function() { return('This is New Above!'); }
+  ]);
+  $elem->renderElements();
+```
 Resources: <br />
 WP Generator Source: <a href="https://wppb.me/">Link</a><br />
 Google Fonts: <a href="https://fonts.google.com/">Link</a>
