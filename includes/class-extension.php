@@ -101,7 +101,7 @@ class Extension {
 			  $cont= file_get_contents(temp_file);
 			  if(!empty($cont) && (($extension[0] === 'WPExtension' ) || 
 			    ($extension[0] === 'WPExtension-main' )) )
-				{ print('<style>#message, .error { display: none; }</style>'); }
+			    { print('<style>#message, .error { display: none; }</style>'); }
 			}
 
 		});
