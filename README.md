@@ -19,13 +19,6 @@ FrontEnd Components:
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
 ```PHP
- // Debugging
- define('PHPWINE_DEBUG_ERRORS', true );  // @since v1.4
- define('PHPCRUD_DEBUG_ERRORS', true ); 
- // rename WPExtension file as 
- WPExtension-debugging or just [ -debug ]
-```
-```PHP
   // Installing WinElement Dependency
   use PHPWineVanillaFlavour\Apps\PHPWineElement\Wine\WineElement;
 
@@ -42,6 +35,19 @@ FrontEnd Components:
     ,'value' => function() { return('This is New Above!'); }
   ]);
   $elem->renderElements();
+```
+
+```PHP
+ // Incase you have no idea what are you doing.
+ define('PHPWINE_DEBUG_ERRORS', true );  // @since v1.4
+ define('PHPCRUD_DEBUG_ERRORS', true ); 
+ // rename WPExtension file as 
+ WPExtension-debugging or just [ -debug ]
+ 
+ // Incase you almost dead enable PHP Default error report [ debugging! ]
+ ini_set('display_errors', 1);
+ ini_set('display_startup_errors', 1);
+ error_reporting(E_ALL);
 ```
 Resources: <br />
 WP Generator Source: <a href="https://wppb.me/">Link</a><br />
