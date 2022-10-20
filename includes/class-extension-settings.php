@@ -23,10 +23,13 @@
 class Settings {
 
     // Load app from apps admin
-    public static string $wine_load_admin    = '/../apps/admin/app/';
+    public static string $wine_load_admin      = '/../Apps/Admin/App/';
 
     // Load app from apps public
-    public static string $wine_load_public   = '/../apps/public/app/';
+    public static string $wine_load_public     = '/../Apps/Public/App/';
+
+    // Load app from apps public
+    public static string $wine_load_shortcodes = '/../Apps/Shortcode/';
 
     static public function wine_load_admin() {
         return self::$wine_load_admin;
@@ -34,6 +37,10 @@ class Settings {
 
     static public function wine_load_public() {
         return self::$wine_load_public;
+    }
+
+    static public function wine_load_shortcodes() {
+        return self::$wine_load_shortcodes;
     }
     
 }

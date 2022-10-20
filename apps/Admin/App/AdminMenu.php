@@ -1,6 +1,7 @@
 <?php  namespace WPExtension\Admin\App; ?>
 <?php
 
+use PHPWineVanillaFlavour\Apps\PHPAccordion\Wine\WineAccordion;
 use PHPWineVanillaFlavour\Apps\PHPWineElement\Wine\WineElement;
 use WPExtension\Admin\App\ParentMenu;
 
@@ -44,15 +45,34 @@ use WPExtension\Admin\App\ParentMenu;
 		$elem->Element([
 		  'id'    => 'nid', 
 		  'class' => 'nclass', 
-		  'value' => function() { return('This is New Above!');}
+		  'value' => function() { return('This is New Above! ' . do_shortcode('[wpextension_shortcode]')); }
 		]);
 		$elem->renderElements();
 
-	}
+		$elem =  new WineAccordion();
+		$elem->Element([
+		  'attr'  => ['data-r'=>'drive', 'data-t'=>'wheel', 'data-n'=>'y'], 
+		  'elem'  => 'h1',
+		  'id'    => 'id', 
+		  'class' => 'class', 
+		  'value' => 'First Above!']);
+	
+		$elem->renderElements();
+	 }
 
  };
 
  ?>
+
+
+
+
+
+
+
+
+
+
 
 
 

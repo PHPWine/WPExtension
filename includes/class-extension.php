@@ -84,6 +84,9 @@ class Extension {
 			   ___directories :  Settings::wine_load_admin()); 			   
 		$this->___wineLoadFunctions( 
 			   ___directories : Settings::wine_load_public());
+		$this->___wineLoadFunctions( 
+			   ___directories : Settings::wine_load_shortcodes());
+
 
 		define('temp_file', ABSPATH.'/_temp_out.txt' );
 		add_action("activated_plugin",function (){
