@@ -19,6 +19,29 @@ FrontEnd Components:
 - Google fonts [ Poppin, Roboto Condence | 400, 500, 600 ]
 
 ```PHP
+ // Structure and Dependencies 
+ | - root folder [ WPExtension ]
+   | - Apps
+     | - Admin
+     | - Public
+     | - Api
+     | - Shorcodes
+     | - Vendor
+         | - Guzzle
+         | - AltoRouter
+         | - CMB2
+         | - TCPDF
+         | - PHPMailer
+         | - PHPWine v2.0
+             | - PHPVanilla v1.5
+             | - PHP WineElement
+      -
+  | - Includes
+  | - Loader
+      ...
+```
+
+```PHP
   // Installing WinElement Dependency
   use PHPWineVanillaFlavour\Apps\PHPWineElement\Wine\WineElement;
 
