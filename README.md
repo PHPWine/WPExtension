@@ -35,6 +35,7 @@ FrontEnd Components:
          | - PHPWine v2.0
              | - PHPVanilla v1.5
              | - PHP WineElement
+             | - PHPWine Enhancers
       -
   | - Includes
   | - Loader
