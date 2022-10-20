@@ -42,7 +42,7 @@ FrontEnd Components:
  define('PHPWINE_DEBUG_ERRORS', true );  // @since v1.4
  define('PHPCRUD_DEBUG_ERRORS', true ); 
  // rename WPExtension file as 
- WPExtension-debugging or just [ -debug ]
+ WPExtension-debugging or just [ -debug ] Disregard error message header_sent that happen when framework having content already.
  
  // Incase you almost dead enable PHP Default error report [ debugging! ]
  ini_set('display_errors', 1);
