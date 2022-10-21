@@ -84,12 +84,12 @@ FrontEnd Components:
 
 ```HTML
  <!-- Array Child element rendered --> 
- <div>
+ <section>
    <div>
     <h1>This is the moment!</h1>
     <div>Awesome great helper as Enhancer try!</div>
    </div>
- </div>
+ </section>
 ```
 
 <h5>Debugging:</h5>
