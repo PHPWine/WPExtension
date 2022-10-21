@@ -61,6 +61,38 @@ FrontEnd Components:
 ```
 
 ```PHP
+ // Array Child element with [ try ] 
+ // from 1.4 ['elem_sort' = function() { ... }] in PHPWine v2.0 replace as ['try'=> fn () =>  ]
+ $elem =  new WineElement();
+ $elem->Element([
+  'value' => [ CHILD => [
+   
+   ['div', INNER => [ 
+     ['try' => fn () => (true) ? [ 
+        
+        ['h1', VALUE=>["This is the moment!"]] 
+        
+        ] : false 
+     ],
+     ['div', VALUE=>["Awesome great helper try! "]]
+   ]] // end of first elem
+
+   ]] # end of child
+ ]);
+ $elem->renderElements();
+```
+
+```HTML
+ <!-- Array Child element rendered --> 
+ <div>
+   <div>
+    <h1>This is the moment!</h1>
+    <div>Awesome great helper as Enhancer try!</div>
+   </div>
+ </div>
+```
+
+```PHP
  // Incase you have no idea what are you doing.
  define('PHPWINE_DEBUG_ERRORS', true );  // @since v1.4
  define('PHPCRUD_DEBUG_ERRORS', true ); 
