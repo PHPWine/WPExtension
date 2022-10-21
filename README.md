@@ -1,7 +1,7 @@
 # WPExtension plugin framework
 WPExtension System cloud application development wp plugin framework [ Support only PHP v8++  ]
 
-Backend Dependencies :  PHPVanilla RESTful-API | Guzzle  |  AltoRouter | CMB2 | TCPDF | GULP | PHPMailer | PHPWine v2.0 | PHPVanilla v1.5 | PHPWine Enhancer |
+Backend Dependencies :  <a href="https://github.com/PHPWine/PHPVanilla">PHPVanilla RESTful-API</a> | <a href="https://github.com/nielsofficeofficial/guzzle">Guzzle</a>  |  <a href="https://github.com/nielsofficeofficial/AltoRouter">AltoRouter</a> | <a href="https://github.com/nielsofficeofficial/CMB2">CMB2</a> | <a href="https://github.com/nielsofficeofficial/TCPDF">TCPDF</a> | <a href="https://gulpjs.com/">GULP</a> | <a href="https://github.com/nielsofficeofficial/PHPMailer">PHPMailer</a> | <a href="https://github.com/PHPWine/PHPWine">PHPWine v2.0</a> | <a href="https://github.com/PHPWine/PHPVanilla">PHPVanilla v1.5</a> | <a href="https://github.com/PHPWine/PHPWine">PHPWine Enhancer</a> |
 - D|T|M : PHP WineElement  
 - D|T|M : PHP Dyanmic Tab 
 - D|T|M : PHP Dyanmic Accordion  
