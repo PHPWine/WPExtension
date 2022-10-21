@@ -67,8 +67,7 @@ FrontEnd Components:
  $elem->Element([
   'value' => [ CHILD => [
    
-   ['div', INNER => [ 
-     ['try' => fn () => (true) ? [ 
+   ['div', INNER => [ ['try' => fn () => (true) ? [ 
         
         ['h1', VALUE=>["This is the moment!"]] 
         
