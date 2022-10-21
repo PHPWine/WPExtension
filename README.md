@@ -92,6 +92,8 @@ FrontEnd Components:
  </div>
 ```
 
+<h5>Debugging:</h5>
+
 ```PHP
  // Incase you have no idea what are you doing.
  define('PHPWINE_DEBUG_ERRORS', true );  // @since v1.4
