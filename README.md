@@ -74,7 +74,7 @@ FrontEnd Components:
         ] : false 
      ],
      ['div', VALUE=>["Awesome great helper try! "]]
-   ]] // end of first elem
+   ]] // end of second elem and inner 
 
    ]] # end of child
  ]);
