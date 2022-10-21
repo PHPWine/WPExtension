@@ -65,7 +65,8 @@ FrontEnd Components:
  // from 1.4 ['elem_sort' = function() { ... }] in PHPWine v2.0 replace as ['try'=> fn () =>  ]
  $elem =  new WineElement();
  $elem->Element([
-  'value' => [ CHILD => [
+  'elem'  => 'section'
+ ,'value' => [ CHILD => [
    
    ['div', INNER => [ ['try' => fn () => (true) ? [ 
         
