@@ -1,5 +1,6 @@
 {
     "require": {
-        "phpwinevanillaflavour/phpwine": "^1.4"
+        "phpwinevanillaflavour/phpwine": "^1.4",
+        "guzzlehttp/guzzle": "^7.0"
     }
 }

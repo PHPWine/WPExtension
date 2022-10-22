@@ -85,7 +85,7 @@ class Extension {
 		$this->___wineLoadFunctions( 
 			   ___directories : Settings::wine_load_public());
 		$this->___wineLoadFunctions( 
-			   ___directories : Settings::wine_load_shortcodes());
+			   ___directories : Settings::wine_load_shortcodes(), sc : '__return_true' );
 
 
 		define('temp_file', ABSPATH.'/_temp_out.txt' );
@@ -101,7 +101,7 @@ class Extension {
 			  $cont= file_get_contents(temp_file);
 			  if(!empty($cont) && (($extension[0] === 'WPExtension' ) || 
 			    ($extension[0] === 'WPExtension-main' )) )
-			    { print('<style>#message, .error { display: none; }</style>'); }
+				{ print('<style>#message, .error { display: none; }</style>'); }
 			}
 
 		});
@@ -159,14 +159,17 @@ class Extension {
 	 * Define the locale for this LoadFile data 
 	 * @since    1.0.0
 	 * @since 16-10-2022 wine v2.0 */
-	private function ___wineLoadFunctions( string|Settings $___directories = null ) : void {  
+	private function ___wineLoadFunctions( string|Settings $___directories = null , bool $sc = false ) : void {  
 	  if(!is_null($___directories)) 
 		{   
 		  $___wineGetAllRun = new DirectoryIterator( dirname( __FILE__ ) . $___directories );
-
+		  
 		  foreach ($___wineGetAllRun as $appRequest) 
-		  {  if (!$appRequest->isDot() ) 
+		  {  if (!$appRequest->isDot() && $sc != true ) 
 			 { require_once( plugin_dir_path(__FILE__) . $___directories . $appRequest->getFilename() ); } 
+			 else if (!$appRequest->isDot() && $sc == true ) 
+			 { require( plugin_dir_path(__FILE__) . $___directories . $appRequest->getFilename() ); } 
+			 else {  ''; }
 		  }
 	   }  
 	}

@@ -131,24 +131,6 @@ Class WineElement {
           { 
 
             /**
-             * Defined: Get Key attributes
-             * @since 1.0.0.0 supprt PHPWine v2.0
-             * @since 10.20.2022 **/
-            $attr_keys   = array_keys($this->container[$i]["get_attrs"]);
-
-            /**
-             * Defined: Value Key attributes
-             * @since 1.0.0.0 supprt PHPWine v2.0
-             * @since 10.20.2022 **/
-            $attr_values = array_values($this->container[$i]["get_attrs"]);
-
-            /**
-             * Defined: set attributes
-             * @since 1.0.0.0 supprt PHPWine v2.0
-             * @since 10.20.2022 **/
-            $attrs       = [ $attr_keys , $attr_values ];
-
-            /**
              * Defined: Dealing with condition by default it's all dive else it's elem you set!
              * @since 1.0.0.0 supprt PHPWine v2.0
              * @since 10.20.2022 **/
@@ -161,7 +143,7 @@ Class WineElement {
             print(ELEM(
              $elemTag, 
              $this->container[$i]['get_value'],
-             $attrs,
+             $this->container[$i]["get_attrs"],
              $this->container[$i]['get_ids'], 
              $this->container[$i]['get_classes']));
           } 

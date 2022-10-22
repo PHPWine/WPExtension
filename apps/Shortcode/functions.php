@@ -27,3 +27,8 @@ function create_wpwineopenandclo_shortcode($atts, $content = null) {
     var_dump($wine);
 
 }
+
+
+function getDataFromShortCode() {
+	return do_shortcode('[wpextension_shortcode]');
+}
