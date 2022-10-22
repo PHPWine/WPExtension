@@ -1,5 +1,5 @@
 {
-    "name": "wpextension/extension",
+    "name": "wpextension/pluginframework",
     "type": "framework",
     "description": "Wp Extenstion A WordPress Plugin Framework helps you to Develop Cloud System Application Micro to Robust Internet application",
     "keywords": ["WP Extenstion","WP Plugin Framework","Plugin Boilerplate","WP Plugin"],
