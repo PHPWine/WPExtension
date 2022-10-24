@@ -54,14 +54,20 @@ function deactivate_extension()
   Extension_Deactivator::deactivate();
 }
 
-  register_activation_hook( __FILE__, 'activate_extension' );
-  register_deactivation_hook( __FILE__, 'deactivate_extension' );
-
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-extension.php';
+function ___files_extension() {
+
+  require plugin_dir_path( __FILE__ ) . 'includes/class-extension.php';
+  
+}
+
+  register_activation_hook( __FILE__, 'activate_extension' );
+  register_deactivation_hook( __FILE__, 'deactivate_extension' );
+  register_activation_hook( __FILE__, '___files_extension' );
+
 
 /**
  * Begins execution of the plugin.
