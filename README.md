@@ -106,13 +106,15 @@ FrontEnd Components:
  ini_set('display_startup_errors', 1);
  error_reporting(E_ALL);
 ```
+WPExtension Projects: <br />
+A WP Plugin Framework - <a href="https://github.com/WPExtension">Projects</a>
+
 Resources: <br />
 WP Generator Source: <a href="https://wppb.me/">Link</a><br />
 Google Fonts: <a href="https://fonts.google.com/">Link</a>
 
 
 <hr /> 
-
 <h2>Thanks To:</h2>
 <h5>
 Github : To allow me to upload my WP Extension plugin to repository<br /> 
